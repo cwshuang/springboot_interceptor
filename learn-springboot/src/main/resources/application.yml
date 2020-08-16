@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+#jdbc:
+# driverClassName: 123
+# url: 234
+# userName: zhangsan
+# password: root
+
+
+logging:  file:    path: E:\java\log  level: 
+     # root: debug  #设置了根目录开始日志级别
+       com.example.demo: debug            
+  

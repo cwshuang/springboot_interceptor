@@ -9,6 +9,7 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.example</groupId>
 	<artifactId>learn-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -17,6 +18,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 跳过单元测试 -->
+		<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
@@ -29,12 +34,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			</dependency>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			</dependency>
+		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -76,13 +81,28 @@
 		</dependency>
 	</dependencies>
 
+	<!-- springboot 打包依赖 -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- 指定maven插件版本，解决Failed to execute goal org.apache.,maven.plugins:maven-compiler-plugin:3.8.1问题 -->
+			<plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-compiler-plugin</artifactId>
+    			<version>3.8.1</version><!--$NO-MVN-MAN-VER$-->
+    			<configuration>
+        			<source>1.8</source>
+        			<target>1.8</target>
+    			</configuration>
+			</plugin>
+			
 		</plugins>
 	</build>
+	
+
+	
 
 </project>

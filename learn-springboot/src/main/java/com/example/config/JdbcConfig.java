@@ -26,13 +26,11 @@ public class JdbcConfig {
 	private String password;
 	
 	//@Bean
-	public DataSource dataSource() {
-		DruidDataSource  dataSource = new DruidDataSource();
-		dataSource.setDriverClassName(driverClassName);
-		dataSource.setUrl(url);
-		dataSource.setUsername(userName);
-		dataSource.setPassword(password);
-		return dataSource;	
-		}
+	/*
+	 * public DataSource dataSource() { DruidDataSource dataSource = new
+	 * DruidDataSource(); dataSource.setDriverClassName(driverClassName);
+	 * dataSource.setUrl(url); dataSource.setUsername(userName);
+	 * dataSource.setPassword(password); return dataSource; }
+	 */
 
 }

@@ -14,16 +14,14 @@ import com.alibaba.druid.pool.DruidDataSource;
  */
 @EnableConfigurationProperties(JdbcProperties.class)
 public class JdbcConfigClass {
-	
-	@Bean
-	public DataSource dataSource(JdbcProperties jdbcProperties) {
-		DruidDataSource  dataSource = new DruidDataSource();
-		dataSource.setDriverClassName(jdbcProperties.getDriverClassName());
-		dataSource.setUrl(jdbcProperties.getUrl());
-		dataSource.setUsername(jdbcProperties.getUserName());
-		dataSource.setPassword(jdbcProperties.getPassword());
-		dataSource.setPassword(jdbcProperties.getPassword());
-		return dataSource;	
-		}
-
-}
+	/*
+	 * 
+	 * @Bean public DataSource dataSource(JdbcProperties jdbcProperties) {
+	 * DruidDataSource dataSource = new DruidDataSource();
+	 * dataSource.setDriverClassName(jdbcProperties.getDriverClassName());
+	 * dataSource.setUrl(jdbcProperties.getUrl());
+	 * dataSource.setUsername(jdbcProperties.getUserName());
+	 * dataSource.setPassword(jdbcProperties.getPassword());
+	 * dataSource.setPassword(jdbcProperties.getPassword()); return dataSource; }
+	 * 
+	 */}

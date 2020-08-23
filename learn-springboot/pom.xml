@@ -20,7 +20,7 @@
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- 跳过单元测试 -->
+		<!-- 跳过单元测试 -->
 		<skipTests>true</skipTests>
 	</properties>
 
@@ -28,8 +28,25 @@
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-redis</artifactId> 
 			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-redis-reactive</artifactId> 
 			</dependency> -->
+
 		<!-- <dependency> <groupId>org.mybatis.spring.boot</groupId> <artifactId>mybatis-spring-boot-starter</artifactId> 
-			<version>2.1.3</version> </dependency> -->
+	<version>2.1.3</version> </dependency> -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<!-- 代码生成器 -->
+		 <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.2</version>
+        </dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,7 +62,12 @@
 			<artifactId>druid</artifactId>
 			<version>1.1.20</version>
 		</dependency>
-
+        <!-- 动态数据源 -->
+		<dependency>
+		  <groupId>com.baomidou</groupId>
+		  <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+		  <version>3.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -90,19 +112,19 @@
 			</plugin>
 			<!-- 指定maven插件版本，解决Failed to execute goal org.apache.,maven.plugins:maven-compiler-plugin:3.8.1问题 -->
 			<plugin>
-    			<groupId>org.apache.maven.plugins</groupId>
-    			<artifactId>maven-compiler-plugin</artifactId>
-    			<version>3.8.1</version><!--$NO-MVN-MAN-VER$-->
-    			<configuration>
-        			<source>1.8</source>
-        			<target>1.8</target>
-    			</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
-			
+
 		</plugins>
 	</build>
-	
 
-	
+
+
 
 </project>

@@ -15,8 +15,8 @@ import com.example.filter.MyFilter;
 public class FilterConfig {
 
 	@Bean
-	public FilterRegistrationBean registrationBean() {
-		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new MyFilter());
+	public FilterRegistrationBean<MyFilter> registrationBean() {
+		FilterRegistrationBean<MyFilter> filterRegistrationBean = new FilterRegistrationBean<MyFilter>(new MyFilter());
 		filterRegistrationBean.addUrlPatterns("/*");
 		return filterRegistrationBean;
 	}

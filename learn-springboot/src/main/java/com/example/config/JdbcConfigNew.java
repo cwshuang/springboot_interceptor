@@ -14,11 +14,12 @@ import com.alibaba.druid.pool.DruidDataSource;
  */
 @Configuration
 public class JdbcConfigNew {
-	
-	@Bean
-	@ConfigurationProperties(prefix = "jdbc")
-	public DataSource dataSource() {
-		return new DruidDataSource();	
-		}
-
-}
+	/*
+	 * 
+	 * 
+	 * @Bean
+	 * 
+	 * @ConfigurationProperties(prefix = "jdbc") public DataSource dataSource() {
+	 * return new DruidDataSource(); }
+	 * 
+	 */}
